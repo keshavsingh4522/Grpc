@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+message DemoRequest{
+   int32 num1 = 1;
+   int32 num2 = 2;
+}
+
+message DemoResponse {
+	int32 result=1;
+}
+
+service DemoService{
+	rpc Demo(DemoRequest) returns (DemoResponse){}
+	rpc Practice(DemoRequest) returns (DemoResponse){}
+}
